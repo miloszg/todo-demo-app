@@ -1,14 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import MainPage from "./modules/MainPage";
+import reportWebVitals from "./reportWebVitals";
+import { IntlProvider } from "react-intl";
+import englishTranslations from "./translations/en.json";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IntlProvider
+      messages={englishTranslations}
+      locale={"en"}
+      defaultLocale={"en-gb"}
+    >
+      <MainPage />
+    </IntlProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

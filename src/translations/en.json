@@ -1,0 +1,9 @@
+{
+  "FIELD.TITLE": "Todo title",
+  "FIELD.DESCRIPTION": "Description",
+  "ENTRY_DIALOG.EDIT_BUTTON": "Save changes",
+  "ENTRY_DIALOG.SUBMIT_BUTTON": "Add new entry",
+  "ENTRY_DIALOG.ADD_NEW": "Enter new entry data",
+  "ENTRY_DIALOG.EDIT": "Change entry",
+  "MODAL.BUTTON_CANCEL": "Cancel"
+}
