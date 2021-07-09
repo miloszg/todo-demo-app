@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -21,20 +21,17 @@ import { useToggleState } from "../../utils/hooks/useToggle";
 import AddEntryDialog from "../EntryDialog";
 import { useTodos } from "../../utils/hooks/useTodos";
 import { useEditData } from "../../utils/hooks/useEditData";
+import { filterSearch } from "../../utils/filterSearch";
+import useDebounce from "../../utils/hooks/useDebounce";
 
 export interface ContentProps {}
-
-export type Todo = {
-  title: string;
-  description: string;
-  id: number;
-  isDone: boolean;
-  timestamp: string;
-};
 
 const Content = (props: ContentProps) => {
   const [todos, getTodos, addTodo, deleteTodo, updateTodo] = useTodos([]);
   const [addChecked, handleAddChanged] = useToggleState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const debouncedSearchQuery = useDebounce(searchQuery, 200);
 
   const [editData, resetEditData, changeEditData] =
     useEditData(handleAddChanged);
@@ -50,7 +47,8 @@ const Content = (props: ContentProps) => {
             <Grid item xs>
               <TextField
                 fullWidth
-                placeholder="Search by email address, phone number, or user UID"
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by todo's title"
                 InputProps={{
                   disableUnderline: true,
                 }}
@@ -76,7 +74,7 @@ const Content = (props: ContentProps) => {
       <ContentWrapper>
         {todos?.length > 0 ? (
           <CardSection
-            todos={todos}
+            todos={filterSearch(todos, debouncedSearchQuery)}
             deleteTodo={deleteTodo}
             changeEditData={changeEditData}
             updateTodo={updateTodo}

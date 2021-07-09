@@ -1,14 +1,26 @@
-import PeopleIcon from '@material-ui/icons/People';
-import DnsRoundedIcon from '@material-ui/icons/DnsRounded';
-import PermMediaOutlinedIcon from '@material-ui/icons/PhotoSizeSelectActual';
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 
 export const categories = [
-    {
-      id: 'Links',
-      children: [
-        { id: 'Linkedin', icon: <PeopleIcon /> },
-        { id: 'Github', icon: <DnsRoundedIcon /> },
-        { id: 'CV', icon: <PermMediaOutlinedIcon /> },
-      ],
-    },
-  ];
+  {
+    id: "Links",
+    children: [
+      {
+        id: "Linkedin",
+        icon: <LinkedInIcon />,
+        link: "https://www.linkedin.com/in/miłosz-gustawski/",
+      },
+      {
+        id: "Github",
+        icon: <GitHubIcon />,
+        link: "https://github.com/miloszg",
+      },
+      {
+        id: "CV",
+        icon: <AssignmentIndIcon />,
+        link: "https://drive.google.com/file/d/1fOii_4evt9MTnLCWrRDu5q50jlgcdtxa/view?usp=sharing",
+      },
+    ],
+  },
+];

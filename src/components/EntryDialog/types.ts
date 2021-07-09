@@ -1,4 +1,4 @@
-import { Todo } from "../Content/Content";
+import { Todo } from "../Content/types";
 
 export interface DialogProps {
   addChecked: boolean;

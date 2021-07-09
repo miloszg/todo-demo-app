@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Todo } from "../../components/Content/Content";
+import { Todo } from "../../components/Content/types";
 import { UseEditDataProps } from "./types";
 
 export const useEditData = (handleAddChanged: () => void): UseEditDataProps => {

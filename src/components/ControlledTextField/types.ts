@@ -1,5 +1,5 @@
 import { Control } from "react-hook-form";
-import { Todo } from "../Content/Content";
+import { Todo } from "../Content/types";
 
 type Variants = "outlined" | "filled" | "standard";
 

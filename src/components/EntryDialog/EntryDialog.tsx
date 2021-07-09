@@ -14,7 +14,7 @@ import {
   GridItem,
   GridWrapper,
 } from "./EntryDialog.css";
-import { Todo } from "../Content/Content";
+import { Todo } from "../Content/types";
 
 const AddEntryDialog = ({
   addChecked,

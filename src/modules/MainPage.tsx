@@ -30,7 +30,7 @@ const Copyright = () => {
 export interface MainPageProps {}
 
 const MainPage = (props: MainPageProps) => {
-  const [mobileOpen, handleMobileOpen] = useToggleState(false);
+  const [openMenu, handleOpenMenu] = useToggleState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -41,7 +41,7 @@ const MainPage = (props: MainPageProps) => {
           <Navigator PaperProps={{ style: { width: drawerWidth } }} />
         </StyledDrawer>
         <AppWrapper>
-          <Header onDrawerToggle={handleMobileOpen} />
+          <Header />
           <ContentWrapper>
             <Content />
           </ContentWrapper>

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import api from "../../API/api";
 import { toast } from "react-toastify";
-import { Todo } from "../../components/Content/Content";
 import { UseTodosProps } from "./types";
+import { Todo } from "../../components/Content/types";
 
 export const useTodos = (initState?: Todo[]): UseTodosProps => {
   const [todos, setTodos] = useState<Todo[]>(initState ?? []);

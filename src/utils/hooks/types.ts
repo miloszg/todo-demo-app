@@ -1,4 +1,4 @@
-import { Todo } from "../../components/Content/Content";
+import { Todo } from "../../components/Content/types";
 
 export type UseToggleProps = [boolean, () => void];
 

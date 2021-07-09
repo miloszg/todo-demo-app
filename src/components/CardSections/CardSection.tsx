@@ -12,9 +12,10 @@ import {
   StyledCheckbox,
   StyledFormControlLabel,
 } from "./CardSection.css";
-import { Todo } from "../Content/Content";
+
 import { Chip } from "@material-ui/core";
 import TimeIcon from "@material-ui/icons/QueryBuilder";
+import { Todo } from "../Content/types";
 
 interface CardSectionProps {
   todos: Todo[];
