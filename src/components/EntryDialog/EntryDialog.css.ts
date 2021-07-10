@@ -47,8 +47,8 @@ export const DialogActionWrapper = styled(DialogActions)<DialogActionsProps>`
 
 export const DialogTitleWrapper = styled(DialogTitle)<DialogTitleProps>`
   &.MuiDialogTitle-root {
-    color: #000;
-    background-color: ${palette.ACTION_LIGHTER};
+    color: #fff;
+    background: ${palette.LINEAR_GRADIENT};
     text-align: left;
   }
 `;
@@ -57,7 +57,7 @@ export const CloseIcon = styled(Close)<SvgIconProps>`
   &.MuiSvgIcon-root {
     cursor: pointer;
     &:hover {
-      color: ${palette.ACTION_DARK};
+      color: #fff;
     }
   }
 `;

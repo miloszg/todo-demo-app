@@ -14,13 +14,19 @@ const ControllerTextField = ({
   size,
   placeholder,
   type,
+  helperText,
+  maxLength,
 }: ControlledTextFieldProps) => {
   const intl = useIntl();
 
   return (
     <Controller
       name={name}
-      rules={{ required, validate: (value: any) => !!value }}
+      rules={{
+        required,
+        maxLength: maxLength ?? 1000,
+        validate: (value: any) => !!value,
+      }}
       control={control}
       render={({ field, ...props }) => (
         <TextFieldComponent
@@ -34,6 +40,7 @@ const ControllerTextField = ({
           size={size}
           placeholder={placeholder}
           label={label && intl.formatMessage({ id: label })}
+          helperText={helperText}
           {...field}
           {...props}
         />

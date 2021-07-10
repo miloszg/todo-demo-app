@@ -35,6 +35,7 @@ const Menu = (props: NavigatorProps) => {
                 href={link}
                 target="_blank"
                 rel="noreferrer"
+                key={`link-${childId}`}
               >
                 <ChildListItem key={childId} button>
                   <StyledListItemIcon>{icon}</StyledListItemIcon>

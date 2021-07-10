@@ -9,7 +9,7 @@ export const PageWrapper = styled.div`
 
 export const StyledDrawer = styled.nav`
   width: ${drawerWidth}px;
-  @media (max-width: 600px) {
+  @media (max-width: 676px) {
     display: none;
     flex-shrink: 0;
   }

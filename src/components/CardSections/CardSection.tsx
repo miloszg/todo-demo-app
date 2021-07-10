@@ -1,7 +1,6 @@
 import React from "react";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import {
   CardActionWrapper,
   CardWrapper,
@@ -11,6 +10,8 @@ import {
   GridWrapper,
   StyledCheckbox,
   StyledFormControlLabel,
+  StyledDescription,
+  StyledTitle,
 } from "./CardSection.css";
 
 import { Chip } from "@material-ui/core";
@@ -35,7 +36,7 @@ const CardSection = ({
     spacing={1}
     direction="row"
     alignItems="center"
-    justify="center"
+    justifyContent="center"
   >
     {todos.map((todo: Todo, id: number) => (
       <GridItem key={`todo-entry-${todo.id}-${id}`} item>
@@ -58,14 +59,20 @@ const CardSection = ({
               color="primary"
               variant="outlined"
             />
-            <Typography variant="h5" component="h2">
-              {todo?.title ?? ""}
-            </Typography>
-            <Typography variant="body2" component="p">
+            <StyledTitle variant="h5">{todo?.title ?? ""}</StyledTitle>
+            <StyledDescription variant="body2">
               {todo?.description}
-            </Typography>
+            </StyledDescription>
           </CardContent>
           <CardActionWrapper>
+            <Button
+              size="small"
+              color="secondary"
+              variant="outlined"
+              onClick={() => deleteTodo(todo?.id)}
+            >
+              <DeleteIcon />
+            </Button>
             <Button
               size="small"
               color="primary"
@@ -73,14 +80,6 @@ const CardSection = ({
               onClick={() => changeEditData(todo)}
             >
               <EditIcon />
-            </Button>
-            <Button
-              size="small"
-              color="primary"
-              variant="outlined"
-              onClick={() => deleteTodo(todo?.id)}
-            >
-              <DeleteIcon />
             </Button>
           </CardActionWrapper>
         </CardWrapper>

@@ -7,14 +7,13 @@ import {
   FormControlLabel,
   Grid,
   SvgIconProps,
+  Typography,
+  TypographyProps,
 } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import palette from "../../assets/palette";
 import { Edit, Delete } from "@material-ui/icons";
-
-interface CardProps {
-  $isDone?: boolean;
-}
+import { CardProps } from "./types";
 
 export const GridWrapper = styled(Grid)`
   &.MuiGrid-root {
@@ -43,6 +42,23 @@ export const EditIcon = styled(Edit)<SvgIconProps>`
     &:hover {
       color: ${palette.ACTION_DARK};
     }
+  }
+`;
+
+export const StyledTitle = styled(Typography)<TypographyProps>`
+  &.MuiTypography-root {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+  }
+`;
+
+export const StyledDescription = styled(Typography)<TypographyProps>`
+  &.MuiTypography-root {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 60px;
   }
 `;
 

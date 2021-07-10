@@ -1,9 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Hidden from "@material-ui/core/Hidden";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import Navigator from "../components/Menu";
 import Content from "../components/Content";
 import Header from "../components/Header";
@@ -16,13 +14,12 @@ import {
 } from "./MainPage.css";
 import { drawerWidth } from "./const";
 import { theme } from "../assets/theme";
-import { useToggleState } from "../utils/hooks/useToggle";
 import ToastProvider from "../components/ToastProvider/";
 
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {`Copyright © Knowunity - Todo App new ${new Date().getFullYear()}.`}
+      {`Copyright © Knowunity - Todo App ${new Date().getFullYear()}.`}
     </Typography>
   );
 };
@@ -30,8 +27,6 @@ const Copyright = () => {
 export interface MainPageProps {}
 
 const MainPage = (props: MainPageProps) => {
-  const [openMenu, handleOpenMenu] = useToggleState(false);
-
   return (
     <ThemeProvider theme={theme}>
       <PageWrapper>

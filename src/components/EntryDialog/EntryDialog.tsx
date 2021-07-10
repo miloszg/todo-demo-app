@@ -79,12 +79,12 @@ const AddEntryDialog = ({
     >
       <DialogTitleWrapper color="primary">
         <Grid container direction="row" alignItems="center">
-          <Grid xs={12} sm={6} item container justify="flex-start">
+          <Grid xs={12} sm={6} item container justifyContent="flex-start">
             {intl.formatMessage({
               id: `ENTRY_DIALOG.${isEdited ? "EDIT" : "ADD_NEW"}`,
             })}
           </Grid>
-          <Grid xs={12} sm={6} item container justify="flex-end">
+          <Grid xs={12} sm={6} item container justifyContent="flex-end">
             <IconButton aria-label="close" onClick={handleOnClose}>
               <CloseIcon />
             </IconButton>
@@ -97,7 +97,7 @@ const AddEntryDialog = ({
             container
             direction="column"
             alignItems="center"
-            justify="center"
+            justifyContent="center"
           >
             <GridItem xs={12} item>
               <ControlledTextField
@@ -106,6 +106,8 @@ const AddEntryDialog = ({
                 control={control}
                 required={true}
                 variant="outlined"
+                maxLength={20}
+                helperText="Max 20 characters"
               />
             </GridItem>
             <GridItem xs={12} item>
@@ -115,6 +117,8 @@ const AddEntryDialog = ({
                 control={control}
                 variant="outlined"
                 isMulti={true}
+                maxLength={150}
+                helperText="Max 150 characters"
               />
             </GridItem>
           </GridWrapper>

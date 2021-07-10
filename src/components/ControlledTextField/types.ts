@@ -12,5 +12,7 @@ export interface ControlledTextFieldProps {
   isMulti?: boolean;
   size?: "small" | "medium";
   placeholder?: string;
+  helperText?: string;
   type?: string;
+  maxLength?: number;
 }

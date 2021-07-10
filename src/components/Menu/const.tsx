@@ -1,3 +1,4 @@
+import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";

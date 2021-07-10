@@ -31,7 +31,7 @@ const Content = (props: ContentProps) => {
   const [addChecked, handleAddChanged] = useToggleState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const debouncedSearchQuery = useDebounce(searchQuery, 200);
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
   const [editData, resetEditData, changeEditData] =
     useEditData(handleAddChanged);

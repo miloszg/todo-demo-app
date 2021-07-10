@@ -1,20 +1,19 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Grid from "@material-ui/core/Grid";
-import HelpIcon from "@material-ui/icons/Help";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import { StyledAppBar } from "./Header.css";
 
 interface HeaderProps {}
 
 const Header = (props: HeaderProps) => {
   return (
-    <AppBar
+    <StyledAppBar
       component="header"
       color="primary"
       position="static"
       elevation={0}
-      style={{ padding: 10 }}
     >
       <Toolbar>
         <Grid container alignItems="center" spacing={1}>
@@ -32,7 +31,7 @@ const Header = (props: HeaderProps) => {
           </Grid> */}
         </Grid>
       </Toolbar>
-    </AppBar>
+    </StyledAppBar>
   );
 };
 
