@@ -19,7 +19,7 @@ import ToastProvider from "../components/ToastProvider/";
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {`Copyright © Knowunity - Todo App ${new Date().getFullYear()}.`}
+      {`Copyright © Todoify ${new Date().getFullYear()}.`}
     </Typography>
   );
 };

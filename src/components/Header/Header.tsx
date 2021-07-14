@@ -6,32 +6,23 @@ import { StyledAppBar } from "./Header.css";
 
 interface HeaderProps {}
 
-const Header = (props: HeaderProps) => {
-  return (
-    <StyledAppBar
-      component="header"
-      color="primary"
-      position="static"
-      elevation={0}
-    >
-      <Toolbar>
-        <Grid container alignItems="center" spacing={1}>
-          <Grid item xs>
-            <Typography color="inherit" variant="h5" component="h1">
-              Knowunity - Todo App
-            </Typography>
-          </Grid>
-          {/* <Grid item> tutaj na menu
-            <Tooltip title="Help">
-              <IconButton color="inherit">
-                <HelpIcon />
-              </IconButton>
-            </Tooltip>
-          </Grid> */}
+const Header = (props: HeaderProps) => (
+  <StyledAppBar
+    component="header"
+    color="primary"
+    position="static"
+    elevation={0}
+  >
+    <Toolbar>
+      <Grid container alignItems="center" spacing={1}>
+        <Grid item xs>
+          <Typography color="inherit" variant="h5" component="h1">
+            Todoify
+          </Typography>
         </Grid>
-      </Toolbar>
-    </StyledAppBar>
-  );
-};
+      </Grid>
+    </Toolbar>
+  </StyledAppBar>
+);
 
 export default Header;
